@@ -12,19 +12,22 @@ body {
     padding: 20px;
 }
 
+/* Header */
 header {
     display: flex;
-    justify-content: space-between; /* Space between logo and navigation */
+    justify-content: space-between; /* Sắp xếp logo và navigation */
     align-items: center;
     padding: 10px 20px;
     background-color: #333;
 }
 
+/* Logo */
 header .logo img {
     width: 54.3px;
     height: 46px;
 }
 
+/* Điều hướng */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -33,30 +36,43 @@ nav ul {
     width: 100%;
 }
 
+/* Điều chỉnh vị trí các mục navigation */
 .nav-left {
     display: flex;
-    gap: 20px; /* Space between each menu item */
+    gap: 20px; /* Khoảng cách giữa các mục menu */
+    margin-right: auto;  /* Di chuyển về bên trái */
 }
 
 .nav-right {
     display: flex;
-    gap: 20px; /* Space between each button (Login, Register) */
-    margin-left: auto; /* This pushes the .nav-right items to the right */
+    gap: 20px; /* Khoảng cách giữa các nút (Login, Register) */
+    margin-left: auto; /* Đẩy các mục vào bên phải */
 }
 
+/* Cập nhật cho các liên kết trong menu */
 .nav-left a {
     color: white;
     text-decoration: none;
     font-size: 22px;  /* Tăng thêm 4px */
     white-space: nowrap;  /* Ngăn không cho chữ xuống dòng */
+    font-weight: bold; /* In đậm chữ */
 }
 
+/* Định dạng cho các liên kết trong nav-right */
 .nav-right a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold; /* In đậm chữ */
+    transition: background-color 0.5s ease; /* Hiệu ứng đổi màu nền từ từ */
 }
 
+/* Hiệu ứng khi hover trên link */
+.nav-right a:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+
+/* Nút Đăng nhập và Đăng ký */
 .nav-right .btn {
     padding: 10px 20px;
     background-color: #007BFF;
@@ -64,10 +80,12 @@ nav ul {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: bold; /* In đậm chữ */
+    transition: background-color 0.5s ease; /* Hiệu ứng đổi màu nền từ từ */
 }
 
 .nav-right .btn:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Màu nền khi hover */
 }
 
 footer {
