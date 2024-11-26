@@ -32,9 +32,9 @@ registerForm.addEventListener('submit', function(event) {
 
     localStorage.setItem('user', JSON.stringify(userData));
 
-    alert('Registration successful!');
+    alert('Registration successful! Nẽt to Login');
 
-    registerForm.reset();
+    window.location.href = 'login.html';
 });
 
 // Log
