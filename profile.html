@@ -28,15 +28,21 @@
     </header>
 
     <main>
+        <div class="profile-container">
+            <h2>User Profile</h2>
+            <p><strong>Email:</strong> <span id="userEmail"></span></p>
+            
+            <h3>Change Password</h3>
+            <form id="changePasswordForm">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" required>
 
+                <label for="confirmNewPassword">Confirm New Password:</label>
+                <input type="password" id="confirmNewPassword" required>
 
-
-
-
-
-
-
-
+                <button type="submit">Update Password</button>
+            </form>
+        </div>
 
     </main>
 

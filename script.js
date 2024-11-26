@@ -72,10 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 else errorMessage.style.display = 'block';
             }
-            else
-            {
-                errorMessage.style.display = 'block';
-            }
+            else errorMessage.style.display = 'block';
         });
     }
 
@@ -94,8 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const user = JSON.parse(localStorage.getItem('user'));
             userEmail.textContent = user.email;
             userInfo.style.display = 'block';
-            if (loginBtn) loginBtn.style.display = 'none';          //@Kn45nb Code lỗi
-            if (registerBtn) registerBtn.style.display = 'none';    //
+            if (loginBtn) loginBtn.style.display = 'none';
+            if (registerBtn) registerBtn.style.display = 'none';
         }
 
     //LogOut
