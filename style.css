@@ -1,3 +1,4 @@
+/* Reset mặc định */
 * {
     margin: 0;
     padding: 0;
@@ -12,73 +13,6 @@ body {
 }
 
 header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    color: #4CAF50;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #4CAF50;
-    font-weight: bold;
-}
-
-main {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-form label {
-    font-weight: bold;
-}
-
-form input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #45a049;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #888;
-}
-
-/* Flex layout to align navigation items */
-header {
     display: flex;
     justify-content: space-between; /* Space between logo and navigation */
     align-items: center;
@@ -86,7 +20,19 @@ header {
     background-color: #333;
 }
 
-/* Navigation sections (Left and Right) */
+header .logo img {
+    width: 54.3px;
+    height: 46px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
 .nav-left {
     display: flex;
     gap: 20px; /* Space between each menu item */
@@ -98,7 +44,13 @@ header {
     margin-left: auto; /* This pushes the .nav-right items to the right */
 }
 
-.nav-left a,
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;  /* Tăng thêm 4px */
+    white-space: nowrap;  /* Ngăn không cho chữ xuống dòng */
+}
+
 .nav-right a {
     color: white;
     text-decoration: none;
@@ -116,4 +68,10 @@ header {
 
 .nav-right .btn:hover {
     background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
 }
