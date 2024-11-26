@@ -1,0 +1,22 @@
+project-root
+│
+├── index.html          # Trang chính (Home Page)
+├── register.html       # (Tùy chọn) Trang Đăng ký riêng
+├── login.html          # (Tùy chọn) Trang Đăng nhập riêng
+│
+├── css
+│   └── style.css       # File CSS chính
+│
+├── js
+│   └── script.js       # File JavaScript chính
+│
+├── img                # Thư mục chứa hình ảnh (nếu có)
+│   └── logo.png        # Ví dụ hình ảnh logo hoặc hình minh họa
+│
+├── pages              # Các trang phụ khác
+│   └── profile.html    # Trang hồ sơ cá nhân
+│   └── cart.html       # Trang giỏ hàng
+│
+└── assets             # (Tùy chọn) Thư mục chứa các tài nguyên bổ sung
+    ├── fonts          # Thư mục chứa font chữ
+    └── icons          # Thư mục chứa icon
