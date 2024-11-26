@@ -1,0 +1,15 @@
+project-root/
+│
+├── index.html          # Trang chính (Home Page)
+├── login.html          # Trang Đăng nhập
+├── register.html       # Trang Đăng ký
+├── profile.html        # Trang hồ sơ cá nhân
+├── cart.html           # Trang giỏ hàng
+├── contact.html        # Trang liên hệ
+│
+├── style.css           # File CSS chung
+├── script.js           # File JavaScript chung
+│
+└── img/                # Thư mục chứa tất cả các hình ảnh
+    └── logo.png
+    └── banner.jpg

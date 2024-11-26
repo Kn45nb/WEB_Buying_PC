@@ -9,8 +9,8 @@ body
 header
 {
     display: flex;
-    justify-content: flex-start;   /* Tách phần logo và thanh điều hướng */
-    align-items: center;              /* Căn giữa theo chiều dọc */
+    justify-content: flex-start;
+    align-items: center;
     background-color: #333;
     padding: 10px 20px;
 }
@@ -20,7 +20,7 @@ header
     height: 100px;  /* Điều chỉnh kích thước logo */
 }
 
-/*tool-bar-left*/
+/* tool-bar */
 .tool-bar-left
 {
     list-style: none;
@@ -52,18 +52,18 @@ header
 .tool-bar-left a:hover
 {
     color: #007BFF;
-    transform: translateY(-2px); /* Tạo hiệu ứng nổi lên khi hover */
+    transform: translateY(-2px);
 }
 .tool-bar-left a:hover::after
 {
-    width: 100%;  /* Gạch dưới mở rộng toàn bộ */
+    width: 100%;
 }
 
 .tool-bar-right
 {
     list-style: none;
     padding: 0;
-    margin-left: auto;  /* Đẩy toolbar-right ra phía bên phải */
+    margin-left: auto;
     display: flex;
     gap: 20px;
 }
@@ -81,18 +81,18 @@ header
 
 .btn:hover
 {
-    background-color: #00b515;  /* Hiệu ứng hover */
+    background-color: #00b515;
 }
 
 /* Main grid styling */
 .grid-container
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Tự động điều chỉnh cột */
-    gap: 20px;   /* Khoảng cách giữa các ô */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
     padding: 20px;
     margin: 0 auto;
-    max-width: 1200px;   /* Giới hạn chiều rộng */
+    max-width: 1200px;
 }
 
 .grid-item
@@ -115,16 +115,16 @@ footer
 
 /* Định dạng chung cho body và html */
 html, body {
-    height: 100%;              /* Chiều cao toàn màn hình */
+    height: 100%;
     margin: 0;
     display: flex;
-    flex-direction: column;    /* Sắp xếp các phần tử theo chiều dọc */
+    flex-direction: column;
 }
 
 /* Định dạng main để chiếm phần còn lại */
 main {
-    flex: 1;                   /* Mở rộng main để đẩy footer xuống */
-    padding: 20px;             /* Khoảng cách nội dung */
+    flex: 1;
+    padding: 20px;
 }
 
 /* Định dạng footer */
