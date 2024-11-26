@@ -1,95 +1,91 @@
-/* Reset mặc định */
-* {
+/* Styling chung */
+body
+{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+    font-size: 14px;
 }
 
-/* Header */
-header {
+/* Header styling */
+header
+{
     display: flex;
-    justify-content: space-between; /* Sắp xếp logo và navigation */
-    align-items: center;
-    padding: 10px 20px;
+    justify-content: space-between;   /* Tách phần logo và thanh điều hướng */
+    align-items: center;              /* Căn giữa theo chiều dọc */
     background-color: #333;
+    padding: 10px 20px;
 }
 
 /* Logo */
-header .logo img {
-    width: 54.3px;
-    height: 46px;
+.logo img
+{
+    height: 50px;  /* Điều chỉnh kích thước logo */
 }
 
-/* Điều hướng */
-nav ul {
-    list-style-type: none;
+/* Navigation styling */
+header ul
+{
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
+    list-style: none;    /* Loại bỏ dấu chấm */
+    padding: 0;
+    margin: 0;
 }
 
-/* Điều chỉnh vị trí các mục navigation */
-.nav-left {
-    display: flex;
-    gap: 20px; /* Khoảng cách giữa các mục menu */
-    margin-right: auto;  /* Di chuyển về bên trái */
+/* Khoảng cách giữa các mục */
+header li
+{
+    margin: 0 15px;
 }
 
-.nav-right {
-    display: flex;
-    gap: 20px; /* Khoảng cách giữa các nút (Login, Register) */
-    margin-left: auto; /* Đẩy các mục vào bên phải */
-}
-
-/* Cập nhật cho các liên kết trong menu */
-.nav-left a {
-    color: white;
+/* Link styling */
+header a
+{
     text-decoration: none;
-    font-size: 22px;  /* Tăng thêm 4px */
-    white-space: nowrap;  /* Ngăn không cho chữ xuống dòng */
-    font-weight: bold; /* In đậm chữ */
-}
-
-/* Định dạng cho các liên kết trong nav-right */
-.nav-right a {
     color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold; /* In đậm chữ */
-    transition: background-color 0.5s ease; /* Hiệu ứng đổi màu nền từ từ */
-}
-
-/* Hiệu ứng khi hover trên link */
-.nav-right a:hover {
-    background-color: #0056b3; /* Màu nền khi hover */
-}
-
-/* Nút Đăng nhập và Đăng ký */
-.nav-right .btn {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
     font-size: 16px;
-    font-weight: bold; /* In đậm chữ */
-    transition: background-color 0.5s ease; /* Hiệu ứng đổi màu nền từ từ */
 }
 
-.nav-right .btn:hover {
-    background-color: #0056b3; /* Màu nền khi hover */
+/* Button styling */
+.btn
+{
+    background-color: #007BFF;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-footer {
+.btn:hover
+{
+    background-color: #0056b3;  /* Hiệu ứng hover */
+}
+
+/* Main grid styling */
+.grid-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Tự động điều chỉnh cột */
+    gap: 20px;   /* Khoảng cách giữa các ô */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;   /* Giới hạn chiều rộng */
+}
+
+.grid-item
+{
+    background-color: #ddd;
+    padding: 20px;
     text-align: center;
+    border-radius: 5px;
+}
+
+/* Footer styling */
+footer
+{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
     margin-top: 20px;
-    color: #888;
 }
