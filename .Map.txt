@@ -13,3 +13,4 @@ project-root/
 └── img/                # Thư mục chứa tất cả các hình ảnh
     └── logo.png
     └── banner.jpg
+    
