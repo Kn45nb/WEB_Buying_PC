@@ -1,71 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset mặc định */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
 header {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 1rem 0;
+    margin-bottom: 20px;
 }
+
+header h1 {
+    color: #4CAF50;
+}
+
 nav ul {
     list-style-type: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-}
-h1, h2 {
-    text-align: center;
-}
-.product-list {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
-.product {
-    border: 1px solid #ddd;
-    background-color: white;
-    margin: 20px;
-    padding: 15px;
-    width: 250px;
-    text-align: center;
+
+nav a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
 }
-.product img {
-    width: 100%;
-    height: auto;
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
     padding: 10px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #218838;
-}
-#cart {
-    margin: 20px;
-    padding: 15px;
-    background-color: white;
     border: 1px solid #ddd;
+    border-radius: 5px;
 }
-.remove-btn {
-    background-color: #dc3545;
-    color: white;
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
-    padding: 5px 10px;
-    margin-left: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
-.remove-btn:hover {
-    background-color: #c82333;
+
+form button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
 }

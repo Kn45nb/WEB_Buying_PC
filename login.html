@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký / Đăng nhập</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Đăng ký</h2>
-        <form id="register-form">
-            <input type="text" id="reg-username" placeholder="Tên người dùng" required>
-            <input type="password" id="reg-password" placeholder="Mật khẩu" required>
-            <button type="submit">Đăng ký</button>
-        </form>
-        <h2>Đăng nhập</h2>
-        <form id="login-form">
-            <input type="text" id="login-username" placeholder="Tên người dùng" required>
-            <input type="password" id="login-password" placeholder="Mật khẩu" required>
+    <header>
+        <h1>Đăng nhập tài khoản</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="register.html">Đăng ký</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="loginForm">
+            <label for="loginUsername">Tên đăng nhập:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required placeholder="Nhập tên đăng nhập">
+
+            <label for="loginPassword">Mật khẩu:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required placeholder="Nhập mật khẩu">
+
             <button type="submit">Đăng nhập</button>
         </form>
-        <p id="message"></p>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tên Công Ty - Bản quyền thuộc về công ty.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

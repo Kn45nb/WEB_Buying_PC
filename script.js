@@ -1,32 +1,43 @@
-let cart = [];
-let total = 0;
+// Xử lý đăng ký
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Ngừng hành động mặc định của form
 
-function addToCart(button) {
-    const productDiv = button.parentElement;
-    const productName = productDiv.getAttribute('data-name');
-    const productPrice = parseFloat(productDiv.getAttribute('data-price'));
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
 
-    cart.push({ name: productName, price: productPrice });
-    total += productPrice;
-    updateCart();
-}
+    if (password !== confirmPassword) {
+        alert('Mật khẩu không khớp');
+        return;
+    }
 
-function removeFromCart(index) {
-    total -= cart[index].price; // Giảm tổng tiền khi xóa sản phẩm
-    cart.splice(index, 1); // Xóa sản phẩm khỏi mảng
-    updateCart(); // Cập nhật lại giao diện giỏ hàng
-}
+    const user = {
+        username: username,
+        email: email,
+        password: password
+    };
 
-function updateCart() {
-    const cartItemsList = document.getElementById('cart-items');
-    const totalElement = document.getElementById('total');
+    // Lưu thông tin người dùng vào LocalStorage
+    localStorage.setItem('user', JSON.stringify(user));
 
-    cartItemsList.innerHTML = '';
-    cart.forEach((item, index) => {
-        const li = document.createElement('li');
-        li.innerHTML = `${item.name} - $${item.price.toFixed(2)} <button class="remove-btn" onclick="removeFromCart(${index})">Xóa</button>`;
-        cartItemsList.appendChild(li);
-    });
+    alert('Đăng ký thành công');
+    window.location.href = 'login.html';  // Chuyển đến trang đăng nhập
+});
 
-    totalElement.textContent = total.toFixed(2);
-}
+// Xử lý đăng nhập
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Ngừng hành động mặc định của form
+
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
+    if (storedUser && storedUser.username === username && storedUser.password === password) {
+        alert('Đăng nhập thành công');
+        window.location.href = 'index.html';  // Chuyển đến trang chủ
+    } else {
+        alert('Tên đăng nhập hoặc mật khẩu không chính xác');
+    }
+});
