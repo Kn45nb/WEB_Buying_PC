@@ -59,12 +59,14 @@ header
     width: 100%;  /* Gạch dưới mở rộng toàn bộ */
 }
 
-.tool-bar-right {
+.tool-bar-right
+{
     list-style: none;
     padding: 0;
     margin-left: auto;  /* Đẩy toolbar-right ra phía bên phải */
     display: flex;
     gap: 20px;
+}
 
 /* Button styling */
 .btn
