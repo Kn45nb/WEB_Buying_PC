@@ -1,4 +1,4 @@
-// Registration
+// Reg
 const registerForm = document.getElementById('registerForm');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
@@ -32,39 +32,63 @@ registerForm.addEventListener('submit', function(event) {
 
     localStorage.setItem('user', JSON.stringify(userData));
 
-    alert('Registration successful! Next to Login');
+    alert('Registration successful! Nẽt to Login');
 
     window.location.href = 'login.html';
 });
 
-// Login
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('loginForm');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
-    const errorMessage = document.getElementById('errorMessage');
+// Log
+const loginForm = document.getElementById('loginForm');
+const emailInputLogin = document.getElementById('email');
+const passwordInputLogin = document.getElementById('password');
 
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        const email = emailInput.value.trim();
-        const password = passwordInput.value.trim();
+    const email = emailInputLogin.value.trim();
+    const password = passwordInputLogin.value.trim();
 
-        const user = localStorage.getItem('user');
-        if (user) {
-            const userData = JSON.parse(user);
+    const existingUser = localStorage.getItem('user');
 
-            if (userData.email === email && userData.password === password) {
-                localStorage.setItem('loggedIn', 'true'); // Chuyển giá trị 'true' thành chuỗi
-                alert('Login successful! Redirecting to Home Page'); // Thêm thông báo đăng nhập thành công
-                window.location.href = 'index.html';  // Chuyển hướng về trang chủ sau khi đăng nhập
-            } else {
-                errorMessage.style.display = 'block';
-                errorMessage.textContent = 'Invalid email or password'; // Thêm thông báo lỗi
-            }
+    if (existingUser) {
+        const user = JSON.parse(existingUser);
+
+        if (user.email === email && user.password === password) {
+            // Lưu trạng thái đăng nhập vào localStorage và chuyển hướng về trang chủ
+            localStorage.setItem('loggedIn', true);
+            alert("Login successful!");
+            window.location.href = 'index.html';
         } else {
-            errorMessage.style.display = 'block';
-            errorMessage.textContent = 'Invalid email or password'; // Thêm thông báo lỗi
+            alert("Invalid email or password. Please try again.");
         }
-    });
+    } else {
+        alert("No user found. Please register first.");
+    }
+});
+
+// ========================== Trạng thái Đăng nhập trên trang chủ ==========================
+document.addEventListener('DOMContentLoaded', function() {
+    const loggedIn = localStorage.getItem('loggedIn');
+    const loginBtn = document.getElementById('loginBtn');
+    const registerBtn = document.getElementById('registerBtn');
+    const userInfo = document.getElementById('userInfo');
+    const userEmail = document.getElementById('userEmail');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    if (loggedIn) {
+        // Hiển thị thông tin người dùng và ẩn nút Login và Register
+        loginBtn.style.display = 'none';
+        registerBtn.style.display = 'none';
+        userInfo.style.display = 'block';
+
+        // Hiển thị email người dùng
+        const user = JSON.parse(localStorage.getItem('user'));
+        userEmail.textContent = `Welcome, ${user.email}`;
+
+        // Đăng xuất
+        logoutBtn.addEventListener('click', function() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'index.html';  // Quay lại trang chủ sau khi logout
+        });
+    }
 });
