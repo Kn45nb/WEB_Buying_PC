@@ -1,4 +1,3 @@
-/* Styling chung */
 body
 {
     margin: 0;
@@ -7,7 +6,6 @@ body
     font-size: 14px;
 }
 
-/* Header styling */
 header
 {
     display: flex;
@@ -17,33 +15,48 @@ header
     padding: 10px 20px;
 }
 
-/* Logo */
 .logo img
 {
-    height: 50px;  /* Điều chỉnh kích thước logo */
+    height: 100px;  /* Điều chỉnh kích thước logo */
 }
 
-/* Navigation styling */
-header ul
+/*tool-bar-left*/
+.tool-bar-left
 {
-    display: flex;
-    list-style: none;    /* Loại bỏ dấu chấm */
+    list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 20px;
 }
-
-/* Khoảng cách giữa các mục */
-header li
-{
-    margin: 0 15px;
-}
-
-/* Link styling */
-header a
+.tool-bar-left a
 {
     text-decoration: none;
-    color: white;
     font-size: 16px;
+    color: #ffffff;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+.tool-bar-left a::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007BFF;
+    transition: width 0.3s ease;
+}
+.tool-bar-left a:hover
+{
+    color: #007BFF;
+    transform: translateY(-2px); /* Tạo hiệu ứng nổi lên khi hover */
+}
+.tool-bar-left a:hover::after
+{
+    width: 100%;  /* Gạch dưới mở rộng toàn bộ */
 }
 
 /* Button styling */
@@ -88,4 +101,26 @@ footer
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+}
+
+/* Định dạng chung cho body và html */
+html, body {
+    height: 100%;              /* Chiều cao toàn màn hình */
+    margin: 0;
+    display: flex;
+    flex-direction: column;    /* Sắp xếp các phần tử theo chiều dọc */
+}
+
+/* Định dạng main để chiếm phần còn lại */
+main {
+    flex: 1;                   /* Mở rộng main để đẩy footer xuống */
+    padding: 20px;             /* Khoảng cách nội dung */
+}
+
+/* Định dạng footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
