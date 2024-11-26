@@ -77,3 +77,4 @@ Công cụ phát triển (IDE): Visual Studio Code, Sublime Text.
 Công cụ quản lý cơ sở dữ liệu: MySQL Workbench.
 Công cụ thiết kế giao diện: Figma hoặc Adobe XD (để tạo wireframe và prototyping).
 Các tính năng này đảm bảo đáp ứng đầy đủ các yêu cầu từ phía khách hàng và đảm bảo hiệu suất cũng như trải nghiệm người dùng tốt nhất.
+    
