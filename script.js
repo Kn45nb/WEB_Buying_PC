@@ -86,20 +86,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const userEmail = document.getElementById('userEmail');
     const logoutBtn = document.getElementById('logoutBtn');
 
-    if (userInfo) {  // Kiểm tra nếu đang ở trang chủ
+    if (userInfo)
+    {
         const loggedIn = localStorage.getItem('loggedIn');
-        if (loggedIn) {
+        if (loggedIn)
+        {
             const user = JSON.parse(localStorage.getItem('user'));
             userEmail.textContent = user.email;
-            userInfo.style.display = 'block';  // Hiển thị thông tin người dùng và nút đăng xuất
-            if (loginBtn) loginBtn.style.display = 'none';   // Ẩn nút đăng nhập
-            if (registerBtn) registerBtn.style.display = 'none'; // Ẩn nút đăng ký
+            userInfo.style.display = 'block';
+            if (loginBtn) loginBtn.style.display = 'none';          //@Kn45nb Code lỗi
+            if (registerBtn) registerBtn.style.display = 'none';    //
         }
 
-        // Đăng xuất
-        logoutBtn.addEventListener('click', function() {
+    //LogOut
+        logoutBtn.addEventListener('click', function()
+        {
             localStorage.removeItem('loggedIn');
-            window.location.href = 'index.html'; // Quay lại trang chủ sau khi đăng xuất
+            window.location.href = 'index.html';
         });
     }
 });
