@@ -71,16 +71,17 @@ header
 /* Button styling */
 .btn
 {
-    background-color: #007BFF;
+    background-color: #595959;
     padding: 8px 15px;
     border-radius: 5px;
     color: white;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .btn:hover
 {
-    background-color: #0056b3;  /* Hiệu ứng hover */
+    background-color: #00b515;  /* Hiệu ứng hover */
 }
 
 /* Main grid styling */

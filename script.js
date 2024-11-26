@@ -1,43 +1,67 @@
-// Xử lý đăng ký
-document.getElementById('registerForm').addEventListener('submit', function(event) {
-    event.preventDefault();  // Ngừng hành động mặc định của form
+// Reg
+const registerForm = document.getElementById('registerForm');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirmPassword');
 
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
+registerForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = emailInput.value;
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
 
     if (password !== confirmPassword) {
-        alert('Mật khẩu không khớp');
+        alert("Passwords do not match!");
         return;
     }
 
-    const user = {
-        username: username,
+    const existingUser = localStorage.getItem('user');
+    if (existingUser) {
+        const user = JSON.parse(existingUser);
+        if (user.email === email) {
+            alert("Email already exists. Please use a different email.");
+            return;
+        }
+    }
+
+    const userData = {
         email: email,
         password: password
     };
 
-    // Lưu thông tin người dùng vào LocalStorage
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('user', JSON.stringify(userData));
 
-    alert('Đăng ký thành công');
-    window.location.href = 'login.html';  // Chuyển đến trang đăng nhập
+    alert('Registration successful!');
+
+    registerForm.reset();
 });
 
-// Xử lý đăng nhập
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();  // Ngừng hành động mặc định của form
+// Log
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const errorMessage = document.getElementById('errorMessage');
 
-    const username = document.getElementById('loginUsername').value;
-    const password = document.getElementById('loginPassword').value;
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    const storedUser = JSON.parse(localStorage.getItem('user'));
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
 
-    if (storedUser && storedUser.username === username && storedUser.password === password) {
-        alert('Đăng nhập thành công');
-        window.location.href = 'index.html';  // Chuyển đến trang chủ
-    } else {
-        alert('Tên đăng nhập hoặc mật khẩu không chính xác');
-    }
+        const user = localStorage.getItem('user');
+        if (user) {
+            const userData = JSON.parse(user);
+
+            if (userData.email === email && userData.password === password) {
+                localStorage.setItem('loggedIn', true);
+                window.location.href = 'index.html';  // Chuyển hướng về trang chủ sau khi đăng nhập
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        } else {
+            errorMessage.style.display = 'block';
+        }
+    });
 });
