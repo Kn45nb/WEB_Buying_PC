@@ -9,7 +9,7 @@ body
 header
 {
     display: flex;
-    justify-content: space-between;   /* Tách phần logo và thanh điều hướng */
+    justify-content: flex-start;   /* Tách phần logo và thanh điều hướng */
     align-items: center;              /* Căn giữa theo chiều dọc */
     background-color: #333;
     padding: 10px 20px;
@@ -58,6 +58,13 @@ header
 {
     width: 100%;  /* Gạch dưới mở rộng toàn bộ */
 }
+
+.tool-bar-right {
+    list-style: none;
+    padding: 0;
+    margin-left: auto;  /* Đẩy toolbar-right ra phía bên phải */
+    display: flex;
+    gap: 20px;
 
 /* Button styling */
 .btn
