@@ -1,0 +1,79 @@
+Bổ sung các tính năng cho trang web đa trang theo yêu cầu:
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+1. Phân tích yêu cầu khách hàng và người dùng:
+Yêu cầu chức năng (Functional Requirements):
+
+Đăng ký/Đăng nhập người dùng.
+Hiển thị sản phẩm theo danh mục.
+Tìm kiếm và lọc sản phẩm.
+Thêm/xóa sản phẩm vào/ra khỏi giỏ hàng.
+Thanh toán trực tuyến (giả lập).
+Quản lý tài khoản người dùng (hồ sơ, lịch sử mua hàng).
+Yêu cầu phi chức năng (Non-functional Requirements):
+
+Tốc độ tải trang dưới 3 giây.
+Tương thích trên các thiết bị (responsive design).
+Bảo mật thông tin người dùng (SSL, mã hóa dữ liệu).
+Khả năng mở rộng cho số lượng người dùng lớn.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+2. Phân tích và lựa chọn framework phù hợp:
+Front-end Framework: React hoặc Vue.js
+
+Ưu điểm: Tạo giao diện động, khả năng tái sử dụng component.
+Nhược điểm: Cần học thêm về các khái niệm component-based.
+Back-end Framework: Node.js (Express) hoặc Laravel (PHP)
+
+Ưu điểm: Xử lý yêu cầu nhanh, cộng đồng hỗ trợ lớn.
+Nhược điểm: Cần quản lý phiên bản và cấu hình phụ trợ.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+3. Chức năng cụ thể cho từng trang:
+Trang chủ (Home Page):
+
+Hiển thị danh sách sản phẩm nổi bật.
+Thanh tìm kiếm nhanh.
+Banner khuyến mãi.
+Trang liên hệ (Contact Page):
+
+Form liên hệ.
+Bản đồ chỉ đường (tích hợp Google Maps API).
+Trang đăng nhập/đăng ký (Login/Register Page):
+
+Kiểm tra và xác thực dữ liệu đầu vào bằng JavaScript.
+Thông báo lỗi cụ thể nếu dữ liệu không hợp lệ.
+Mã hóa mật khẩu phía client trước khi gửi.
+Trang hồ sơ (Profile Page):
+
+Chỉnh sửa thông tin cá nhân.
+Hiển thị lịch sử đơn hàng.
+Trang giỏ hàng (My Cart Page):
+
+Hiển thị sản phẩm đã thêm vào giỏ hàng.
+Tính tổng giá tiền động.
+Nút xóa sản phẩm khỏi giỏ hàng.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+4. Tính năng nâng cao:
+SEO (Search Engine Optimization):
+
+Tối ưu hóa tốc độ tải trang.
+Thẻ meta và từ khóa tối ưu.
+Tạo sitemap.xml và robots.txt.
+Kiểm thử (Testing Plan):
+
+Tạo bảng kiểm thử với các trường hợp như kiểm tra form đăng nhập, đăng ký, và chức năng giỏ hàng.
+Kiểm thử giao diện người dùng (UI) và trải nghiệm người dùng (UX).
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+5. Công cụ và kỹ thuật hỗ trợ:
+Công cụ phát triển (IDE): Visual Studio Code, Sublime Text.
+Công cụ quản lý cơ sở dữ liệu: MySQL Workbench.
+Công cụ thiết kế giao diện: Figma hoặc Adobe XD (để tạo wireframe và prototyping).
+Các tính năng này đảm bảo đáp ứng đầy đủ các yêu cầu từ phía khách hàng và đảm bảo hiệu suất cũng như trải nghiệm người dùng tốt nhất.

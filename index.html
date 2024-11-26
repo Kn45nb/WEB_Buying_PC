@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang bán linh kiện máy tính</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TechStore</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#products">Sản Phẩm</a></li>
+                <li><a href="#cart">Giỏ Hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>Sản Phẩm Nổi Bật</h2>
+        <div class="product-list">
+            <div class="product" data-id="1" data-name="CPU Intel i9" data-price="500">
+                <img src="cpu.jpg" alt="CPU Intel i9">
+                <h3>CPU Intel i9</h3>
+                <p class="price">$500</p>
+                <button onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product" data-id="2" data-name="RAM 16GB DDR4" data-price="120">
+                <img src="ram.jpg" alt="RAM 16GB DDR4">
+                <h3>RAM 16GB DDR4</h3>
+                <p class="price">$120</p>
+                <button onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+            </div>
+            <!-- Thêm sản phẩm khác tại đây -->
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Giỏ Hàng</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Tổng tiền: $<span id="total">0</span></strong></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
