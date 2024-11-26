@@ -77,3 +77,44 @@ footer {
     margin-top: 20px;
     color: #888;
 }
+
+/* Flex layout to align navigation items */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+/* Navigation sections (Left and Right) */
+.nav-left {
+    display: flex;
+    gap: 20px; /* Space between each menu item */
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px; /* Space between each button (Login, Register) */
+    margin-left: auto; /* This pushes the .nav-right items to the right */
+}
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-right .btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.nav-right .btn:hover {
+    background-color: #0056b3;
+}
