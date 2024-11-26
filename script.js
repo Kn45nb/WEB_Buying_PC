@@ -1,4 +1,4 @@
-// Reg
+// Registration
 const registerForm = document.getElementById('registerForm');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
@@ -32,12 +32,12 @@ registerForm.addEventListener('submit', function(event) {
 
     localStorage.setItem('user', JSON.stringify(userData));
 
-    alert('Registration successful! Nẽt to Login');
+    alert('Registration successful! Next to Login');
 
     window.location.href = 'login.html';
 });
 
-// Log
+// Login
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
     const emailInput = document.getElementById('email');
@@ -55,13 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const userData = JSON.parse(user);
 
             if (userData.email === email && userData.password === password) {
-                localStorage.setItem('loggedIn', true);
+                localStorage.setItem('loggedIn', 'true'); // Chuyển giá trị 'true' thành chuỗi
+                alert('Login successful! Redirecting to Home Page'); // Thêm thông báo đăng nhập thành công
                 window.location.href = 'index.html';  // Chuyển hướng về trang chủ sau khi đăng nhập
             } else {
                 errorMessage.style.display = 'block';
+                errorMessage.textContent = 'Invalid email or password'; // Thêm thông báo lỗi
             }
         } else {
             errorMessage.style.display = 'block';
+            errorMessage.textContent = 'Invalid email or password'; // Thêm thông báo lỗi
         }
     });
 });
