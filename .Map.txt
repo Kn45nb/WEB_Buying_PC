@@ -24,4 +24,20 @@ project-root/
     ├── github.png                  # Logo Contact 1
     ├── facebook.com                # Logo Contact 2
     └── ...                         # Logo Contact khác (nếu có)
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Copyright © 2024 DAtW KN45NB - All rights reserved. Permission is granted to copy, distribute, or modify this work under the Creative Commons (CC) license.

@@ -236,3 +236,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//Copyright © 2024 DAtW KN45NB - All rights reserved. Permission is granted to copy, distribute, or modify this work under the Creative Commons (CC) license.

@@ -77,4 +77,16 @@ Công cụ phát triển (IDE): Visual Studio Code, Sublime Text.
 Công cụ quản lý cơ sở dữ liệu: MySQL Workbench.
 Công cụ thiết kế giao diện: Figma hoặc Adobe XD (để tạo wireframe và prototyping).
 Các tính năng này đảm bảo đáp ứng đầy đủ các yêu cầu từ phía khách hàng và đảm bảo hiệu suất cũng như trải nghiệm người dùng tốt nhất.
-    
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2024 DAtW KN45NB - All rights reserved. Permission is granted to copy, distribute, or modify this work under the Creative Commons (CC) license.
