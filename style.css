@@ -135,5 +135,97 @@ footer {
     padding: 10px 0;
 }
 
+/*Màu mè times-------------------------------------------------------------------------------------*/
 
+/*index.html*/
+/* Định dạng chung cho sản phẩm */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;                /* Khoảng cách giữa các ô */
+    justify-content: center;  /* Căn giữa các sản phẩm */
+    padding: 20px;
+}
 
+/* Định dạng cho từng ô sản phẩm */
+.product {
+    background-color: #f9f9f9;    /* Màu nền */
+    border: 1px solid #ccc;       /* Viền nhẹ */
+    border-radius: 10px;          /* Bo tròn góc */
+    width: 200px;                 /* Chiều rộng của mỗi ô */
+    padding: 15px;                /* Khoảng cách bên trong */
+    text-align: center;           /* Căn giữa nội dung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Đổ bóng */
+    transition: transform 0.2s;   /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng khi hover vào ô sản phẩm */
+.product:hover {
+    transform: translateY(-5px);  /* Nổi lên khi di chuột */
+}
+
+/* Định dạng cho tên sản phẩm */
+.product h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Định dạng cho giá sản phẩm */
+.product p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Định dạng cho nút Add to Cart */
+.add-to-cart-btn {
+    background-color: #4CAF50;      /* Màu nền xanh lá */
+    color: white;                   /* Màu chữ trắng */
+    border: none;                   /* Loại bỏ viền */
+    border-radius: 5px;             /* Bo tròn góc */
+    padding: 10px 15px;             /* Kích thước nút */
+    cursor: pointer;                /* Con trỏ khi hover */
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+/* Hiệu ứng hover cho nút */
+.add-to-cart-btn:hover {
+    background-color: #45a049;      /* Màu tối hơn khi hover */
+}
+
+/* Mix img */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Hiệu ứng fade-out */
+.fade-out {
+    opacity: 0;
+}

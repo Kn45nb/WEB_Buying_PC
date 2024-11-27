@@ -1,16 +1,23 @@
 project-root/
 │
-├── index.html          # Trang chính (Home Page)
-├── login.html          # Trang Đăng nhập
-├── register.html       # Trang Đăng ký
-├── profile.html        # Trang hồ sơ cá nhân
-├── cart.html           # Trang giỏ hàng
-├── contact.html        # Trang liên hệ
+├── index.html                      # Trang chính (Home Page)
+├── login.html                      # Trang Đăng nhập
+├── register.html                   # Trang Đăng ký
+├── profile.html                    # Trang hồ sơ cá nhân
+├── cart.html                       # Trang giỏ hàng
+├── contact.html                    # Trang liên hệ
 │
-├── style.css           # File CSS chung
-├── script.js           # File JavaScript chung
+├── style.css                       # File CSS chung
+├── script.js                       # File JavaScript chung
 │
-└── img/                # Thư mục chứa tất cả các hình ảnh
-    └── logo.png
-    └── banner.jpg
+└── img/                            # Thư mục chứa tất cả các hình ảnh
+    ├──pro/
+    │   ├──Ryzen 5 5600X            # Sản phẩm 1
+    │   │   ├──image1.png           # Ảnh 1
+    │   │   ├──image2.png           # Ảnh 2
+    │   │   └──...                  # Ảnh khác (nếu có)
+    │   ├──                         # Sản phẩm 2
+    │   └──...                      # Sản phẩm khác (nếu có)
+    ├── logo.png                    # Logo chính
+    └── banner.jpg                  # Banner (nếu có)
     
