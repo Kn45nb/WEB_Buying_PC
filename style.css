@@ -623,9 +623,10 @@ footer {
 
 /* Styling the cart items container */
 #cart-items {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: flex;               /* Sử dụng flexbox */
+    align-items: center;         /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Đẩy các phần tử ra hai bên */
+    margin-bottom: 20px;         /* Khoảng cách giữa các sản phẩm */
 }
 
 /* Styling each product item */
@@ -646,22 +647,33 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Button to remove the product from the cart */
-.cart-item button {
-    padding: 5px 10px;
-    font-size: 14px;
-    background-color: #dc3545; /* Red color */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.remove-btn {
+    background-color: #ff4d4f;         /* Màu nền mặc định */
+    color: white;                      /* Màu chữ */
+    border: none;                      /* Loại bỏ viền */
+    padding: 8px 12px;                 /* Kích thước nút */
+    border-radius: 5px;                /* Bo tròn các góc */
+    cursor: pointer;                   /* Con trỏ chuột dạng pointer */
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển đổi */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);          /* Đổ bóng nhẹ */
+    order: -1;                   /* Đưa nút về bên trái */
+    margin-right: 15px;          /* Tạo khoảng cách với tên sản phẩm */
 }
 
-/* Hover effect for remove button */
-.cart-item button:hover {
-    background-color: #c82333;
+/* Hiệu ứng khi di chuột vào nút */
+.remove-btn:hover {
+    background-color: #e63946;         /* Đổi màu nền */
+    transform: translateY(-2px);       /* Dịch chuyển nút lên trên một chút */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Tăng độ đổ bóng */
 }
+
+/* Hiệu ứng khi nhấn nút */
+.remove-btn:active {
+    transform: translateY(0);          /* Trở về vị trí ban đầu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Giảm độ đổ bóng */
+}
+
+
 
 /* Checkout button styling */
 #checkoutBtn {
@@ -681,4 +693,98 @@ footer {
     background-color: #0056b3;
 }
 
+/*User Name @Kn45nb put lên top*/
+#userEmail {
+    color: rgb(51, 51, 51);                      /* Chữ màu trắng */
+    font-weight: bold;                 /* In đậm */
+    background-color: white;           /* Nền trắng */
+    border: 2px solid white;           /* Viền trắng */
+    padding: 5px 10px;                 /* Khoảng cách bên trong khung */
+    border-radius: 8px;                /* Bo tròn các góc */
+    display: inline-block;             /* Giúp khung bọc sát nội dung */
+    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+}
 
+/* Hiệu ứng khi di chuột vào khung */
+#userEmail:hover {
+    color: #ffffff;                    /* Màu chữ vàng khi hover */
+    background-color: rgb(51, 51, 51);            /* Nền đen khi hover */
+    transform: scale(1.1);             /* Phóng to nhẹ */
+}
+
+/*Contact*/
+/* Style cho form trong phần #form-container */
+#form-container form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;  /* Bo góc cho form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Đổ bóng cho form */
+    width: 100%;
+    max-width: 500px;  /* Giới hạn độ rộng tối đa của form */
+    display: flex;
+    flex-direction: column;  /* Sắp xếp các phần tử trong form theo chiều dọc */
+    gap: 20px;  /* Khoảng cách giữa các phần tử */
+}
+
+/* Cấu trúc #form-container để căn giữa */
+#form-container {
+    display: flex;
+    justify-content: center;  /* Căn giữa form theo chiều ngang */
+    align-items: center;  /* Căn giữa form theo chiều dọc */
+    height: 100vh;  /* Chiếm toàn bộ chiều cao của màn hình */
+    padding: 20px;
+}
+
+/* Định dạng cho từng phần tử logo-item trong form */
+#form-container form .logo-item {
+    display: flex;
+    align-items: center;  /* Căn giữa logo và chữ theo chiều dọc */
+    gap: 15px;  /* Khoảng cách giữa logo và văn bản */
+    cursor: pointer;  /* Thêm hiệu ứng con trỏ khi rê chuột lên logo */
+    transition: transform 0.4s, opacity 0.4s;  /* Thêm hiệu ứng phóng to/thu nhỏ */
+    padding: 10px;  /* Thêm khoảng cách xung quanh các phần tử */
+    border-radius: 6px;  /* Bo góc cho từng phần tử logo */
+}
+
+/* Hiệu ứng nháy mắt (blink) và phóng to khi hover */
+#form-container form .logo-item:hover {
+    opacity: 0.7;  /* Làm mờ logo khi rê chuột */
+    transform: scale(1.1);  /* Phóng to logo khi rê chuột */
+}
+
+/* Định dạng cho logo */
+#form-container form .logo-item .logo {
+    width: 50px;  /* Đặt kích thước logo */
+    height: 50px;
+    transition: transform 0.4s ease;  /* Thêm hiệu ứng phóng to thu nhỏ */
+}
+
+/* Hiệu ứng phóng to logo khi rê chuột */
+#form-container form .logo-item:hover .logo {
+    transform: scale(1.3);  /* Phóng to logo khi rê chuột vào */
+}
+
+/* Định dạng cho văn bản */
+#form-container form .logo-item p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;  /* Loại bỏ khoảng cách mặc định */
+    transition: color 0.4s ease;  /* Hiệu ứng thay đổi màu văn bản */
+}
+
+/* Thay đổi màu chữ khi rê chuột vào logo-item */
+#form-container form .logo-item:hover p {
+    color: #007bff;  /* Đổi màu chữ thành xanh khi rê chuột */
+}
+
+/* Hiệu ứng cho form khi có hiệu ứng hover */
+#form-container form:hover {
+    background-color: #f9f9f9;  /* Đổi màu nền khi rê chuột vào form */
+    transform: scale(1.02);  /* Phóng to form khi rê chuột vào */
+}
+
+/* Hiệu ứng cho phần tử logo-item khi đang nhấn */
+#form-container form .logo-item:active {
+    transform: scale(0.98);  /* Thu nhỏ một chút khi nhấn */
+    background-color: #f0f0f0;  /* Đổi màu nền của phần tử khi nhấn */
+}

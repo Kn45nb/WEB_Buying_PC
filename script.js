@@ -155,9 +155,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             cart.forEach((item, index) => {
                 const itemElement = document.createElement('div');
-                itemElement.innerHTML = `
+                itemElement.innerHTML =
+                `
+                    <div class="cart-item">
+                    <button onclick="removeFromCart(${index})" class="remove-btn">Remove</button>
                     <p>${item.name} - $${item.price}</p>
-                    <button onclick="removeFromCart(${index})">Remove</button>
+                    </div>
                 `;
                 cartItemsContainer.appendChild(itemElement);
             });
@@ -182,6 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         displayCart();
     }
+    
 
     // Logic User
     const loginBtn = document.getElementById('loginBtn');
