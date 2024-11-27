@@ -233,4 +233,452 @@ footer {
 }
 
 
-/*Reg and Log*/
+/*Reg*/
+/* Container for the register form */
+.register-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on the form */
+.register-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading style */
+.register-form h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+/* Label styling */
+.register-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* Focus effect for input labels */
+.register-form input:focus + label {
+    color: #007BFF;
+}
+
+/* Input fields styling */
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus effect */
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus,
+.register-form input[type="text"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styling */
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.register-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Button active (click) effect */
+.register-form button:active {
+    transform: translateY(1px);
+}
+
+/* Button focus effect */
+.register-form button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive design */
+@media screen and (max-width: 480px) {
+    .register-form {
+        padding: 15px;
+    }
+
+    .register-form h2 {
+        font-size: 20px;
+    }
+}
+
+/* Keyframes for fading effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/*Login*/
+/* Container for the login form */
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on the form */
+.login-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading style */
+.login-form h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+/* Label styling */
+.login-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* Focus effect for input labels */
+.login-form input:focus + label {
+    color: #007BFF;
+}
+
+/* Input fields styling */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus effect */
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styling */
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.login-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Button active (click) effect */
+.login-form button:active {
+    transform: translateY(1px);
+}
+
+/* Button focus effect */
+.login-form button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive design */
+@media screen and (max-width: 480px) {
+    .login-form {
+        padding: 15px;
+    }
+
+    .login-form h2 {
+        font-size: 20px;
+    }
+}
+
+/* Keyframes for fading effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Profile*/
+/* Container for the profile section */
+.profile-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Hover effect on the profile container */
+.profile-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading style */
+.profile-container h2,
+.profile-container h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+/* Style for the email information */
+.profile-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.profile-container strong {
+    color: #333;
+}
+
+/* Form styling */
+.profile-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label styling */
+.profile-container label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* Input fields styling */
+.profile-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect for input fields */
+.profile-container input[type="password"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styling */
+.profile-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF; /* Đổi màu nền thành màu xanh dương */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.profile-container button:hover {
+    background-color: #0056b3; /* Màu khi hover */
+    transform: translateY(-2px);
+}
+
+/* Button active (click) effect */
+.profile-container button:active {
+    transform: translateY(1px);
+}
+
+/* Button focus effect */
+.profile-container button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Hiệu ứng focus với màu xanh dương */
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 480px) {
+    .profile-container {
+        padding: 15px;
+    }
+
+    .profile-container h2 {
+        font-size: 20px;
+    }
+
+    .profile-container h3 {
+        font-size: 18px;
+    }
+
+    .profile-container button {
+        font-size: 14px;
+    }
+}
+
+/* Keyframes for fading effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Cart*/
+/* Container for the cart form */
+#cartForm {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Title styling */
+#cartForm h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Styling the cart items container */
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Styling each product item */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for each cart item */
+.cart-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button to remove the product from the cart */
+.cart-item button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #dc3545; /* Red color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for remove button */
+.cart-item button:hover {
+    background-color: #c82333;
+}
+
+/* Checkout button styling */
+#checkoutBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Checkout button hover effect */
+#checkoutBtn:hover {
+    background-color: #0056b3;
+}
+
+
