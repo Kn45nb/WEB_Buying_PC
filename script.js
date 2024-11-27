@@ -211,15 +211,23 @@ document.addEventListener("DOMContentLoaded", () => {
         const imageContainer = product.querySelector('img');  // Lấy thẻ img trong sản phẩm
         const folderPath = product.getAttribute('data-folder');  // Lấy đường dẫn thư mục chứa ảnh
 
-        // Chỉ cần 2 ảnh cố định: image1.png và image2.png
+        // Danh sách ảnh cố định: image1.png và image2.png
         const imageFiles = ['image1.png', 'image2.png'];  
 
         let currentIndex = 0;
 
         // Cập nhật ảnh mỗi 5 giây
         setInterval(() => {
-            currentIndex = (currentIndex + 1) % imageFiles.length;  // Chuyển đến ảnh tiếp theo
-            imageContainer.src = `${folderPath}/${imageFiles[currentIndex]}`;  // Thay đổi ảnh
-        }, 5000);
+            // Thêm lớp fade vào ảnh hiện tại để làm mờ
+            imageContainer.classList.add('fade');
+
+            // Chờ 1 giây (thời gian fade-out), sau đó thay đổi ảnh
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % imageFiles.length;  // Chuyển đến ảnh tiếp theo
+                imageContainer.src = `${folderPath}/${imageFiles[currentIndex]}`;  // Thay đổi ảnh
+                imageContainer.classList.remove('fade'); // Loại bỏ lớp fade để ảnh mới hiện lên
+
+            }, 1000); // 1 giây (thời gian fade-out)
+        }, 5000); // 5 giây để chuyển ảnh
     });
 });
