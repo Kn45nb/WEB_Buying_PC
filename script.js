@@ -204,3 +204,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Mix image
+document.addEventListener("DOMContentLoaded", () => {
+    const products = document.querySelectorAll('.product'); // Lấy tất cả các sản phẩm trên trang
+
+    products.forEach(product => {
+        const imageContainer = product.querySelector('img');  // Lấy thẻ img trong sản phẩm
+        const folderPath = product.getAttribute('data-folder');  // Lấy đường dẫn thư mục chứa ảnh
+
+        // Chỉ cần 2 ảnh cố định: image1.png và image2.png
+        const imageFiles = ['image1.png', 'image2.png'];  
+
+        let currentIndex = 0;
+
+        // Cập nhật ảnh mỗi 5 giây
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % imageFiles.length;  // Chuyển đến ảnh tiếp theo
+            imageContainer.src = `${folderPath}/${imageFiles[currentIndex]}`;  // Thay đổi ảnh
+        }, 5000);
+    });
+});
