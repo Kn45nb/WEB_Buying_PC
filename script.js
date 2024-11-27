@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Giỏ hàng được liên kết với email của người dùng
     let cart = JSON.parse(localStorage.getItem(`cart_${userEmail}`)) || [];
 
-    // --- Logic Add to Cart ---
+    // Logic Thêm to Cart
     const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
     if (addToCartButtons.length > 0) {
         addToCartButtons.forEach(button => {
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Logic Cart Page ---
+    // Logic Main Cart
     const cartItemsContainer = document.getElementById('cart-items');
     const checkoutButton = document.getElementById('checkoutBtn');
 
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
         displayCart();
     }
 
-    // --- Logic for User Authentication ---
+    // Logic User
     const loginBtn = document.getElementById('loginBtn');
     const registerBtn = document.getElementById('registerBtn');
     const userInfo = document.getElementById('userInfo');
