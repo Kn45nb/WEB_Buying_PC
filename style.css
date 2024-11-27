@@ -113,7 +113,7 @@ footer
     margin-top: 20px;
 }
 
-/* Định dạng chung cho body và html */
+/* Định dạng chung cho body và html để đẩy xuống cuối*/
 html, body {
     height: 100%;
     margin: 0;
