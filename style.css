@@ -621,31 +621,62 @@ footer {
     color: #333;
 }
 
-/* Styling the cart items container */
+/* Style cho phần tử giỏ hàng */
 #cart-items {
-    display: flex;               /* Sử dụng flexbox */
-    align-items: center;         /* Căn giữa theo chiều dọc */
-    justify-content: space-between; /* Đẩy các phần tử ra hai bên */
-    margin-bottom: 20px;         /* Khoảng cách giữa các sản phẩm */
+    display: flex;
+    flex-direction: column; /* Sắp xếp các item theo chiều dọc */
+    gap: 10px;              /* Tạo khoảng cách giữa các item */
+    padding: 10px;
 }
 
-/* Styling each product item */
 .cart-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;  /* Màu nền cho item */
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border-radius: 8px;         /* Bo góc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
 }
 
-/* Hover effect for each cart item */
-.cart-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.cart-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;                /* Màu chữ */
 }
+
+.remove-btn {
+    background-color: #ff4d4f;  /* Màu đỏ */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #d9363e;  /* Màu đậm hơn khi hover */
+}
+
+/* Style cho nút Checkout */
+#checkoutBtn {
+    background-color: #4CAF50;  /* Màu xanh lá */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    display: block;              /* Đặt nút ở giữa */
+    margin: 20px auto 0;         /* Căn giữa nút */
+}
+
+#checkoutBtn:hover {
+    background-color: #45a049;   /* Màu đậm hơn khi hover */
+}
+
 
 .remove-btn {
     background-color: #ff4d4f;         /* Màu nền mặc định */
