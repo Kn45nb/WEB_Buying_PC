@@ -744,63 +744,64 @@ footer {
 }
 
 /*Contact*/
-/* Style cho form trong phần #form-container */
-#form-container form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;  /* Bo góc cho form */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Đổ bóng cho form */
-    width: 100%;
-    max-width: 500px;  /* Giới hạn độ rộng tối đa của form */
-    display: flex;
-    flex-direction: column;  /* Sắp xếp các phần tử trong form theo chiều dọc */
-    gap: 20px;  /* Khoảng cách giữa các phần tử */
-}
-
-/* Cấu trúc #form-container để căn giữa */
+/* Cấu trúc #form-container */
 #form-container {
     display: flex;
     justify-content: center;  /* Căn giữa form theo chiều ngang */
-    align-items: center;  /* Căn giữa form theo chiều dọc */
-    height: 100vh;  /* Chiếm toàn bộ chiều cao của màn hình */
-    padding: 20px;
+    padding: 20px;  /* Thêm khoảng cách từ trên xuống để form không sát mép */
+    position: relative;
+    width: 100%;  /* Chiếm toàn bộ chiều ngang */
+}
+
+/* Style cho form trong phần #form-container */
+#form-container form {
+    background-color: #fff;
+    padding: 15px;  /* Padding bên trong form */
+    border-radius: 8px;  /* Bo góc cho form */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Đổ bóng nhẹ */
+    width: 100%;
+    max-width: 400px;  /* Giới hạn độ rộng tối đa của form */
+    display: flex;
+    flex-direction: column;  /* Sắp xếp các phần tử trong form theo chiều dọc */
+    gap: 10px;  /* Khoảng cách giữa các phần tử */
+    margin: 0 auto;  /* Căn giữa form theo chiều ngang */
 }
 
 /* Định dạng cho từng phần tử logo-item trong form */
 #form-container form .logo-item {
     display: flex;
     align-items: center;  /* Căn giữa logo và chữ theo chiều dọc */
-    gap: 15px;  /* Khoảng cách giữa logo và văn bản */
+    gap: 10px;  /* Khoảng cách giữa logo và văn bản */
     cursor: pointer;  /* Thêm hiệu ứng con trỏ khi rê chuột lên logo */
-    transition: transform 0.4s, opacity 0.4s;  /* Thêm hiệu ứng phóng to/thu nhỏ */
-    padding: 10px;  /* Thêm khoảng cách xung quanh các phần tử */
-    border-radius: 6px;  /* Bo góc cho từng phần tử logo */
+    transition: transform 0.3s, opacity 0.3s;  /* Giảm thời gian hiệu ứng */
+    padding: 5px;  /* Giảm padding xung quanh */
+    border-radius: 4px;  /* Bo góc nhẹ */
 }
 
 /* Hiệu ứng nháy mắt (blink) và phóng to khi hover */
 #form-container form .logo-item:hover {
-    opacity: 0.7;  /* Làm mờ logo khi rê chuột */
-    transform: scale(1.1);  /* Phóng to logo khi rê chuột */
+    opacity: 0.8;  /* Làm mờ nhẹ khi rê chuột */
+    transform: scale(1.05);  /* Phóng to nhẹ khi rê chuột */
 }
 
 /* Định dạng cho logo */
 #form-container form .logo-item .logo {
-    width: 50px;  /* Đặt kích thước logo */
-    height: 50px;
-    transition: transform 0.4s ease;  /* Thêm hiệu ứng phóng to thu nhỏ */
+    width: 30px;  /* Giảm kích thước logo */
+    height: 30px;
+    transition: transform 0.3s ease;  /* Giảm thời gian hiệu ứng */
 }
 
 /* Hiệu ứng phóng to logo khi rê chuột */
 #form-container form .logo-item:hover .logo {
-    transform: scale(1.3);  /* Phóng to logo khi rê chuột vào */
+    transform: scale(1.2);  /* Phóng to logo nhẹ */
 }
 
 /* Định dạng cho văn bản */
 #form-container form .logo-item p {
-    font-size: 14px;
+    font-size: 12px;  /* Giảm kích thước chữ */
     color: #333;
     margin: 0;  /* Loại bỏ khoảng cách mặc định */
-    transition: color 0.4s ease;  /* Hiệu ứng thay đổi màu văn bản */
+    transition: color 0.3s ease;  /* Hiệu ứng thay đổi màu văn bản */
 }
 
 /* Thay đổi màu chữ khi rê chuột vào logo-item */
@@ -811,14 +812,15 @@ footer {
 /* Hiệu ứng cho form khi có hiệu ứng hover */
 #form-container form:hover {
     background-color: #f9f9f9;  /* Đổi màu nền khi rê chuột vào form */
-    transform: scale(1.02);  /* Phóng to form khi rê chuột vào */
+    transform: scale(1.01);  /* Phóng to form nhẹ khi rê chuột */
 }
 
 /* Hiệu ứng cho phần tử logo-item khi đang nhấn */
 #form-container form .logo-item:active {
-    transform: scale(0.98);  /* Thu nhỏ một chút khi nhấn */
+    transform: scale(0.97);  /* Thu nhỏ nhẹ khi nhấn */
     background-color: #f0f0f0;  /* Đổi màu nền của phần tử khi nhấn */
 }
+
 
 
 /*Copyright © 2024 DAtW KN45NB - All rights reserved. Permission is granted to copy, distribute, or modify this work under the Creative Commons (CC) license.*/
